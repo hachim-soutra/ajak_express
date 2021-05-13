@@ -1,0 +1,205 @@
+.menu-container {
+  .menu-btn {
+    width: 100%;
+    min-height: 150px;
+    font-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .v-btn__content {
+      display: block;
+      z-index: 1;
+      opacity: 1 !important;
+      width: 100%;
+
+      .menu-item-text,
+      .menu-item-details {
+        color: #fff;
+        opacity: 1 !important;
+        z-index: 1;
+        text-transform: initial;
+        display: block;
+        word-wrap: break-word;
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        font-weight: 600;
+      }
+
+      .menu-item-text {
+        font-size: 22px;
+      }
+
+      .menu-item-details {
+        font-size: 12px;
+        font-weight: 400;
+        width: 60%;
+        margin: 18px auto;
+      }
+
+      //Small
+      @media only screen and (min-width: 600px) {
+        .menu-item-text {
+          font-size: 20px;
+        }
+      }
+
+      //Medium
+      @media only screen and (min-width: 960px) {
+        .menu-item-text {
+          font-size: 18px;
+        }
+
+        .menu-item-details {
+          font-size: 16px;
+        }
+      }
+
+      .menu-item-img {
+        height: 40px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.menu-campagnes {
+      background-image: url("~@/assets/img/menu/campagnes-commerciales.png");
+
+      &:hover:after {
+        background: #a37f43;
+      }
+
+      .menu-item-img {
+        background-image: url("~@/assets/img/menu/underline/gold.png");
+      }
+    }
+
+    &.menu-point-vente {
+      background-image: url("~@/assets/img/menu/point-vente.png");
+
+      &:hover:after {
+        background: #000;
+      }
+
+      .menu-item-img {
+        background-image: url("~@/assets/img/menu/underline/white.png");
+      }
+    }
+
+    &.menu-activation {
+      background-image: url("~@/assets/img/menu/activation.png");
+
+      &:hover:after {
+        background: #750920;
+      }
+
+      .menu-item-img {
+        background-image: url("~@/assets/img/menu/underline/violet.png");
+      }
+    }
+
+    &.menu-reseaux-sociaux {
+      background-image: url("~@/assets/img/menu/reseaux-sociaux.png");
+
+      &:hover:after {
+        background: #374f57;
+      }
+
+      .menu-item-img {
+        background-image: url("~@/assets/img/menu/underline/dark-grey.png");
+      }
+    }
+
+    &.menu-corporate-beau-vivre {
+      background-image: url("~@/assets/img/menu/corporate-beau-vivre.png");
+
+      &:hover:after {
+        background: #909798;
+      }
+
+      .menu-item-img {
+        background-image: url("~@/assets/img/menu/underline/grey.png");
+      }
+    }
+
+    &.menu-produits {
+      background-image: url("~@/assets/img/menu/produits.png");
+
+      &:hover:after {
+        background: #ccc6be;
+      }
+
+      .menu-item-img {
+        background-image: url("~@/assets/img/menu/underline/grey.png");
+      }
+    }
+
+    &.menu-kit-ouverture {
+      background-image: url("~@/assets/img/menu/kit-ouverture.png");
+
+      &:hover:after {
+        background: #cccccc;
+      }
+
+      .menu-item-img {
+        background-image: url("~@/assets/img/menu/underline/grey.png");
+      }
+    }
+
+    &:hover {
+      @media only screen and (min-width: 960px) {
+        .menu-item-details {
+          display: block !important;
+        }
+      }
+
+      &.menu-campagnes,
+      &.menu-point-vente,
+      &.menu-activation,
+      &.menu-reseaux-sociaux,
+      &.menu-corporate-beau-vivre {
+        .menu-item-img {
+          background-image: url("~@/assets/img/menu/underline/white.png");
+        }
+      }
+
+      &.menu-produits,
+      &.menu-kit-ouverture {
+        .menu-item-text,
+        .menu-item-details {
+          color: #000;
+        }
+
+        .menu-item-img {
+          background-image: url("~@/assets/img/menu/underline/black.png");
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      background: rgb(0 0 0 / 60%);
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    .menu-btn {
+      min-height: 400px;
+    }
+  }
+
+  &.nav-menu .menu-btn {
+    min-height: 150px;
+    font-size: 16px;
+  }
+}
